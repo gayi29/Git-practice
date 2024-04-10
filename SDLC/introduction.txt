@@ -1,0 +1,18 @@
+Software development life cycle (SDLC) is a structured process that is used to design, develop, and test good-quality software.
+
+https://www.geeksforgeeks.org/sdlc-models-types-phases-use/
+
+What is SDLC?
+Answer: SDLC, or Software Development Life Cycle, is a systematic process for planning, creating, testing, deploying, and maintaining software. It provides a framework for developers to produce high-quality software that meets user expectations and project requirements.
+
+What are the main phases of SDLC?
+Answer: The main phases of SDLC include Requirements, Design, Implementation (Coding), Testing, Deployment, and Maintenance. These phases represent the stages a software project goes through from initiation to completion.
+
+Why is SDLC important?
+Answer: SDLC ensures a structured and organized approach to software development, leading to the creation of reliable and high-quality software. It helps manage resources efficiently, reduces development time, and minimizes the risk of project failure.
+
+What are the key objectives of SDLC?
+Answer: The key objectives of SDLC include delivering a high-quality product, meeting customer requirements, managing project resources effectively, minimizing risks, and providing a clear and transparent development process.
+
+ow does SDLC differ from Agile methodology?
+Answer: SDLC is a more traditional, sequential approach to software development, while Agile is an iterative and flexible methodology. SDLC follows a structured path, while Agile allows for incremental development with frequent reassessment and adaptation.
