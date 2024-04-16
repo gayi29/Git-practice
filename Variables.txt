@@ -1,0 +1,1084 @@
+Types of variables
+
+1.Static or class variable
+
+2.instance variable
+
+3.local variable
+
+
+
+
+
+
+Suggestion [3,General]: The command activate was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\activate". See "get-help about_Command_Precedence" for more details.
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts> .\activate
+.\activate : File 
+C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts\Activate.ps1 cannot be       
+loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at      
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ .\activate
++ ~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts> d..
+d.. : The term 'd..' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ d..
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (d..:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts> cd ..
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv> Get-ExecutionPolicy
+>>
+Restricted
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+>>
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv> .\activate
+.\activate : The term '.\activate' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ .\activate
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\activate:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv> activate
+activate : The term 'activate' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ activate
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (activate:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv> cd Scripts
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts> activate  
+activate : The term 'activate' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.    
+At line:1 char:1
++ activate
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (activate:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command activate was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\activate". See "get-help about_Command_Precedence" for more details.
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts> .\activate
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts> cd ..
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv> cd ..
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> cd src
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> python main.py
+Traceback (most recent call last):
+  File "C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src\main.py", line 1, in <module>  
+    from fastapi import FastAPI, HTTPException
+ModuleNotFoundError: No module named 'fastapi'
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> pip list
+Package Version
+------- -------
+pip     24.0
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> pip install fastapi
+Collecting fastapi
+  Using cached fastapi-0.110.1-py3-none-any.whl.metadata (24 kB)
+Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi)
+  Using cached pydantic-2.7.0-py3-none-any.whl.metadata (103 kB)
+Collecting starlette<0.38.0,>=0.37.2 (from fastapi)
+  Using cached starlette-0.37.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting typing-extensions>=4.8.0 (from fastapi)
+  Using cached typing_extensions-4.11.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting annotated-types>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi)
+  Using cached annotated_types-0.6.0-py3-none-any.whl.metadata (12 kB)
+Collecting pydantic-core==2.18.1 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi)
+  Using cached pydantic_core-2.18.1-cp312-none-win_amd64.whl.metadata (6.7 kB)
+Collecting anyio<5,>=3.4.0 (from starlette<0.38.0,>=0.37.2->fastapi)
+  Using cached anyio-4.3.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting idna>=2.8 (from anyio<5,>=3.4.0->starlette<0.38.0,>=0.37.2->fastapi)
+  Using cached idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+Collecting sniffio>=1.1 (from anyio<5,>=3.4.0->starlette<0.38.0,>=0.37.2->fastapi)
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Using cached fastapi-0.110.1-py3-none-any.whl (91 kB)
+Using cached pydantic-2.7.0-py3-none-any.whl (407 kB)
+Using cached pydantic_core-2.18.1-cp312-none-win_amd64.whl (1.9 MB)
+Using cached starlette-0.37.2-py3-none-any.whl (71 kB)
+Using cached typing_extensions-4.11.0-py3-none-any.whl (34 kB)
+Using cached annotated_types-0.6.0-py3-none-any.whl (12 kB)
+Using cached anyio-4.3.0-py3-none-any.whl (85 kB)
+Using cached idna-3.7-py3-none-any.whl (66 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Installing collected packages: typing-extensions, sniffio, idna, annotated-types, pydantic-core, anyio, starlette, pydantic, fastapi
+Successfully installed annotated-types-0.6.0 anyio-4.3.0 fastapi-0.110.1 idna-3.7 pydantic-2.7.0 pydantic-core-2.18.1 sniffio-1.3.1 starlette-0.37.2 typing-extensions-4.11.0
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> pip list
+Package           Version
+----------------- -------
+annotated-types   0.6.0
+anyio             4.3.0
+fastapi           0.110.1
+idna              3.7
+pip               24.0
+pydantic          2.7.0
+pydantic_core     2.18.1
+sniffio           1.3.1
+starlette         0.37.2
+typing_extensions 4.11.0
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> pip jwt
+ERROR: unknown command "jwt"
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> pip install jwt
+Collecting jwt
+  Using cached jwt-1.3.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting cryptography!=3.4.0,>=3.1 (from jwt)
+  Using cached cryptography-42.0.5-cp39-abi3-win_amd64.whl.metadata (5.4 kB)
+Collecting cffi>=1.12 (from cryptography!=3.4.0,>=3.1->jwt)
+  Using cached cffi-1.16.0-cp312-cp312-win_amd64.whl.metadata (1.5 kB)
+Collecting pycparser (from cffi>=1.12->cryptography!=3.4.0,>=3.1->jwt)
+  Using cached pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Using cached jwt-1.3.1-py3-none-any.whl (18 kB)
+Using cached cryptography-42.0.5-cp39-abi3-win_amd64.whl (2.9 MB)
+Using cached cffi-1.16.0-cp312-cp312-win_amd64.whl (181 kB)
+Using cached pycparser-2.22-py3-none-any.whl (117 kB)
+Installing collected packages: pycparser, cffi, cryptography, jwt
+Successfully installed cffi-1.16.0 cryptography-42.0.5 jwt-1.3.1 pycparser-2.22
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> pip install jwt
+Requirement already satisfied: jwt in c:\users\gayathri\downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\lib\site-packages (1.3.1)
+Requirement already satisfied: cryptography!=3.4.0,>=3.1 in c:\users\gayathri\downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\lib\site-packages (from jwt) (42.0.5)
+Requirement already satisfied: cffi>=1.12 in c:\users\gayathri\downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\lib\site-packages (from cryptography!=3.4.0,>=3.1->jwt) (1.16.0)
+Requirement already satisfied: pycparser in c:\users\gayathri\downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\lib\site-packages (from cffi>=1.12->cryptography!=3.4.0,>=3.1->jwt) (2.22)
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> python main.py 
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> pip install uvicorn
+Collecting uvicorn
+  Using cached uvicorn-0.29.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting click>=7.0 (from uvicorn)
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting h11>=0.8 (from uvicorn)
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting colorama (from click>=7.0->uvicorn)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Using cached uvicorn-0.29.0-py3-none-any.whl (60 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Installing collected packages: h11, colorama, click, uvicorn
+Successfully installed click-8.1.7 colorama-0.4.6 h11-0.14.0 uvicorn-0.29.0
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> uvicorn main:app --relaod
+Usage: uvicorn [OPTIONS] APP
+Try 'uvicorn --help' for help.
+
+Error: No such option: --relaod (Possible options: --reload, --reload-delay, --reload-dir)
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> uvicorn main:app --reload
+INFO:     Will watch for changes in these directories: ['C:\\Users\\Gayathri\\Downloads\\trng-1903-1904\\trng-1903-1904\\week-1\\project-0\\src']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [77808] using StatReload
+INFO:     Started server process [80616]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62240 - "GET / HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [80616]
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Stopping reloader process [77808]
+(.venv) PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src> uvicorn main:app --reload
+INFO:     Will watch for changes in these directories: ['C:\\Users\\Gayathri\\Downloads\\trng-1903-1904\\trng-1903-1904\\week-1\\project-0\\src']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [80324] using StatReload
+INFO:     Started server process [78684]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62364 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62370 - "GET /users HTTP/1.1" 422 Unprocessable Entity
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [78684]
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [70300]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [70300]
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [77432]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [77432]
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [72788]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62417 - "GET /users HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62464 - "POST /signup HTTP/1.1" 422 Unprocessable Entity
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [72788]
+Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [69188]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [69188]
+Process SpawnProcess-5:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [80524]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62481 - "GET /signup HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:62486 - "POST /signup HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62502 - "POST /users HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:62507 - "GET /users HTTP/1.1" 422 Unprocessable Entity
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [80524]
+Process SpawnProcess-6:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [75240]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [75240]
+Process SpawnProcess-7:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [70300]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [70300]
+Process SpawnProcess-8:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [82516]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82516]
+Process SpawnProcess-9:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [68912]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [68912]
+Process SpawnProcess-10:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [81084]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81084]
+Process SpawnProcess-11:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [31948]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31948]
+Process SpawnProcess-12:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Started server process [78316]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\starlette\routing.py", line 741, in lifespan
+    await receive()
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+Process SpawnProcess-13:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [66192]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [66192]
+Process SpawnProcess-14:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [75792]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [75792]
+Process SpawnProcess-15:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [77052]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+ERROR:    Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\starlette\routing.py", line 741, in lifespan
+    await receive()
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+Process SpawnProcess-16:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+INFO:     Started server process [76100]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62594 - "GET /users HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62603 - "GET /login HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:62617 - "POST /login HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62655 - "POST /login?1=var HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:62658 - "POST /login?1=var HTTP/1.1" 422 Unprocessable Entity
+
+
+
+
+
+
+
+
+
+
+
+
+python
+
+
+
+
+
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> & C:/Users/Gayathri/AppData/Local/Microsoft/WindowsApps/python3.12.exe c:/Users/Gayathri/Downloads/trng-1903-1904/trng-1903-1904/week-1/project-0/src/main.py
+Traceback (most recent call last):
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\src\main.py", line 1, in <module>
+    from fastapi import FastAPI, HTTPException
+ModuleNotFoundError: No module named 'fastapi'
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> pip install fastapi
+Defaulting to user installation because normal site-packages is not writeable
+Collecting fastapi
+  Downloading fastapi-0.110.1-py3-none-any.whl.metadata (24 kB)
+Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi)
+  Downloading pydantic-2.7.0-py3-none-any.whl.metadata (103 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.4/103.4 kB 854.4 kB/s eta 0:00:00
+Collecting starlette<0.38.0,>=0.37.2 (from fastapi)
+  Downloading starlette-0.37.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting typing-extensions>=4.8.0 (from fastapi)
+  Downloading typing_extensions-4.11.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting annotated-types>=0.4.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi)
+  Downloading annotated_types-0.6.0-py3-none-any.whl.metadata (12 kB)
+Collecting pydantic-core==2.18.1 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi)
+  Downloading pydantic_core-2.18.1-cp312-none-win_amd64.whl.metadata (6.7 kB)
+Collecting anyio<5,>=3.4.0 (from starlette<0.38.0,>=0.37.2->fastapi)
+  Downloading anyio-4.3.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting idna>=2.8 (from anyio<5,>=3.4.0->starlette<0.38.0,>=0.37.2->fastapi)
+  Downloading idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+Collecting sniffio>=1.1 (from anyio<5,>=3.4.0->starlette<0.38.0,>=0.37.2->fastapi)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Downloading fastapi-0.110.1-py3-none-any.whl (91 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.9/91.9 kB 2.6 MB/s eta 0:00:00
+Downloading pydantic-2.7.0-py3-none-any.whl (407 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 407.9/407.9 kB 424.0 kB/s eta 0:00:00
+Downloading pydantic_core-2.18.1-cp312-none-win_amd64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 1.5 MB/s eta 0:00:00
+Downloading starlette-0.37.2-py3-none-any.whl (71 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.9/71.9 kB 246.7 kB/s eta 0:00:00
+Downloading typing_extensions-4.11.0-py3-none-any.whl (34 kB)
+Downloading annotated_types-0.6.0-py3-none-any.whl (12 kB)
+Downloading anyio-4.3.0-py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.6/85.6 kB 229.7 kB/s eta 0:00:00
+Downloading idna-3.7-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.8/66.8 kB 120.9 kB/s eta 0:00:00
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Installing collected packages: typing-extensions, sniffio, idna, annotated-types, pydantic-core, anyio, starlette, pydantic, fastapi
+Successfully installed annotated-types-0.6.0 anyio-4.3.0 fastapi-0.110.1 idna-3.7 pydantic-2.7.0 pydantic-core-2.18.1 sniffio-1.3.1 starlette-0.37.2 typing-extensions-4.11.0
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> pip install venv
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: Could not find a version that satisfies the requirement venv (from versions: none)
+ERROR: No matching distribution found for venv
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> pip install virtualenv
+Defaulting to user installation because normal site-packages is not writeable
+Collecting virtualenv
+  Downloading virtualenv-20.25.1-py3-none-any.whl.metadata (4.4 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv)
+  Downloading distlib-0.3.8-py2.py3-none-any.whl.metadata (5.1 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv)
+  Downloading filelock-3.13.4-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: platformdirs<5,>=3.9.1 in c:\users\gayathri\appdata\local\packages\pythonsoftwarefoundation.python.3.12_qbz5n2kfra8p0\localcache\local-packages\python312\site-packages (from virtualenv) (4.2.0)
+Downloading virtualenv-20.25.1-py3-none-any.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 3.4 MB/s eta 0:00:00
+Downloading distlib-0.3.8-py2.py3-none-any.whl (468 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.9/468.9 kB 4.9 MB/s eta 0:00:00
+Downloading filelock-3.13.4-py3-none-any.whl (11 kB)
+Installing collected packages: distlib, filelock, virtualenv
+  WARNING: The script virtualenv.exe is installed in 'C:\Users\Gayathri\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed distlib-0.3.8 filelock-3.13.4 virtualenv-20.25.1
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> pip install jwt
+Defaulting to user installation because normal site-packages is not writeable
+Collecting jwt
+  Downloading jwt-1.3.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting cryptography!=3.4.0,>=3.1 (from jwt)
+  Downloading cryptography-42.0.5-cp39-abi3-win_amd64.whl.metadata (5.4 kB)
+Collecting cffi>=1.12 (from cryptography!=3.4.0,>=3.1->jwt)
+  Downloading cffi-1.16.0-cp312-cp312-win_amd64.whl.metadata (1.5 kB)
+Collecting pycparser (from cffi>=1.12->cryptography!=3.4.0,>=3.1->jwt)
+  Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Downloading jwt-1.3.1-py3-none-any.whl (18 kB)
+Downloading cryptography-42.0.5-cp39-abi3-win_amd64.whl (2.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 4.5 MB/s eta 0:00:00
+Downloading cffi-1.16.0-cp312-cp312-win_amd64.whl (181 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.0/182.0 kB 11.4 MB/s eta 0:00:00
+Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.6/117.6 kB 6.7 MB/s eta 0:00:00
+Installing collected packages: pycparser, cffi, cryptography, jwt
+Successfully installed cffi-1.16.0 cryptography-42.0.5 jwt-1.3.1 pycparser-2.22
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> pip list
+Package           Version
+----------------- -------
+annotated-types   0.6.0
+anyio             4.3.0
+astroid           3.1.0
+cffi              1.16.0
+colorama          0.4.6
+cryptography      42.0.5
+dill              0.3.8
+distlib           0.3.8
+fastapi           0.110.1
+filelock          3.13.4
+idna              3.7
+isort             5.13.2
+jwt               1.3.1
+mccabe            0.7.0
+multipledispatch  1.0.0
+pip               24.0
+platformdirs      4.2.0
+pycparser         2.22
+pydantic          2.7.0
+pydantic_core     2.18.1
+pylint            3.1.0
+sniffio           1.3.1
+starlette         0.37.2
+tomlkit           0.12.4
+typing_extensions 4.11.0
+virtualenv        20.25.1
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> pip install uvicorn
+Defaulting to user installation because normal site-packages is not writeable
+Collecting uvicorn
+  Downloading uvicorn-0.29.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting click>=7.0 (from uvicorn)
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting h11>=0.8 (from uvicorn)
+  Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: colorama in c:\users\gayathri\appdata\local\packages\pythonsoftwarefoundation.python.3.12_qbz5n2kfra8p0\localcache\local-packages\python312\site-packages (from click>=7.0->uvicorn) (0.4.6)
+Downloading uvicorn-0.29.0-py3-none-any.whl (60 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.8/60.8 kB 464.0 kB/s eta 0:00:00
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 1.4 MB/s eta 0:00:00
+Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 3.0 MB/s eta 0:00:00
+Installing collected packages: h11, click, uvicorn
+  WARNING: The script uvicorn.exe is installed in 'C:\Users\Gayathri\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.   
+Successfully installed click-8.1.7 h11-0.14.0 uvicorn-0.29.0
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> pip install sqlite3
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: Could not find a version that satisfies the requirement sqlite3 (from versions: none)
+ERROR: No matching distribution found for sqlite3
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> & C:/Users/Gayathri/AppData/Local/Microsoft/WindowsApps/python3.12.exe c:/Users/Gayathri/Downloads/trng-1903-1904/trng-1903-1904/week-1/project-0/create_tabels.py
+Traceback (most recent call last):
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\create_tabels.py", line 8, in <module>
+    cursor.execute(
+sqlite3.OperationalError: table USER already exists
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> & C:/Users/Gayathri/AppData/Local/Microsoft/WindowsApps/python3.12.exe c:/Users/Gayathri/Downloads/trng-1903-1904/trng-1903-1904/week-1/project-0/create_tabels.py
+Traceback (most recent call last):
+  File "c:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\create_tabels.py", line 8, in <module>
+    cursor.execute(
+sqlite3.OperationalError: table USER already exists
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> cd .venv\Scri[
+cd : Cannot find path '.venv\Scri[' because it does not exist.
+At line:1 char:1
++ cd .venv\Scri[
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.venv\Scri[:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> cd .venv\Scripts\activate
+cd : Cannot find path '.venv\Scripts\activate' because it does not exist.
+At line:1 char:1
++ cd .venv\Scripts\activate
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.venv\Scripts\activate:String) [Set-Location], ItemNotFoundException   
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> cd .venv
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv> cd Scripts
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts> activate
+activate : The term 'activate' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.    
+At line:1 char:1
++ activate
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (activate:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command activate was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\activate". See "get-help about_Command_Precedence" for more details.
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv\Scripts> cd ..
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0\.venv> cd ..
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> source .\.venv\Scripts\activate
+source : The term 'source' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ source .\.venv\Scripts\activate
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (source:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> source ./.venv/Scripts/activate
+source : The term 'source' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ source ./.venv/Scripts/activate
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (source:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> source /.venv/Scripts/activate 
+source : The term 'source' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ source /.venv/Scripts/activate
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (source:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> C:/Users/Gayathri/Downloads/trng-1903-1904/trng-1903-1904/week-1/project-0/src/revhire.db
+PS C:\Users\Gayathri\Downloads\trng-1903-1904\trng-1903-1904\week-1\project-0> 
