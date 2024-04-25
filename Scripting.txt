@@ -1,6 +1,0 @@
-1. create a file: vim script.sh
-
-2. making file to executable mode: chmod +x script.sh
-
-3. run a file: ./script.sh
-
