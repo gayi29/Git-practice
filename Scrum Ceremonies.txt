@@ -1,0 +1,38 @@
+Scrum methodology:
+
+Scrum Ceremony - Breaking larger projects into small manageable pieces of work.
+
+Roles:
+
+1. Product Owner
+2. Scrum master
+3. team members
+
+Scrum Ceremonies - Mainly four
+
+a. Sprint Planning
+
+	- to plan the project and all should attend this meeting.
+
+b. Daily Scrum
+
+	- to connect everyone & discuss up to date on the progress.
+	
+	eg: What did I work on yesterday?
+	    What did I work on today?
+
+c. Sprint review
+
+	- to review everything that is accomplished during last sprint
+
+d. Sprint retrospective
+
+	- Discuss on improvements.
+	   
+ 
+
+
+
+
+ 		
+	- 
